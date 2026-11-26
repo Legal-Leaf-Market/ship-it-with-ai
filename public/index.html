@@ -111,11 +111,15 @@ header.top nav a.cta{color:var(--ink);background:var(--coral);padding:9px 18px;b
 .stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
 .chip{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;font-size:18px;padding:12px 20px;border-radius:999px;background:var(--paper);border:2px solid var(--ink)}
 .chip.pipe{background:var(--ink);color:var(--paper)}
+.spec-label{font-family:'JetBrains Mono','Courier New',monospace;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--coral-deep);margin-top:28px!important}
+.stack.specs{margin-top:14px}
+.stack.specs .chip{font-size:16px;padding:9px 16px}
 
 /* about */
 .about{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
 .about p+p{margin-top:16px}
 .about .body p{color:var(--ink-soft);font-size:19px}
+.about .body p.eyebrow,.about .body p.spec-label{color:var(--coral-deep);font-size:13px}
 .sites{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
 .sites li{border-bottom:1px solid rgba(22,24,43,.14)}
 .sites a{display:flex;justify-content:space-between;gap:16px;padding:18px 0;text-decoration:none}
@@ -238,7 +242,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <h3>Build it with me</h3>
         <p class="meta">One business · in person or online</p>
         <ul>
-          <li>Your site, ordering or booking, built with you on your real business</li>
+          <li>Websites, custom light tools, small business ERPs and fintech, built with you on your real business</li>
           <li>Your own guide file, written together, so your AI knows your rules</li>
           <li>The loop learned on your work, not a sample project</li>
         </ul>
@@ -321,8 +325,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <p class="eyebrow">Who's teaching</p>
       <h2>Jake Kennedy</h2>
       <p style="margin-top:24px">I run small businesses in Columbus, Indiana. I build and run their websites by talking to AI, not by typing code, and I keep a guide file full of every mistake I've made along the way.</p>
-      <p>Behind it: 10 years of accounting and technology experience, and a degree from IU Columbus, earned back when it was still IUPUC.</p>
       <p>The guide file, and the stories behind it, is what I teach. You won't get a list of buttons to click. You'll get the habits that keep a site working after the tools change.</p>
+      <p>Behind it: 10 years of accounting and technology experience, and a degree from IU Columbus, earned back when it was still IUPUC.</p>
+      <p class="spec-label">What I specialize in</p>
+      <div class="stack specs">
+        <span class="chip">Websites</span>
+        <span class="chip">Custom light tools</span>
+        <span class="chip">Small business ERPs</span>
+        <span class="chip">Financial technology (fintech)</span>
+      </div>
     </div>
     <div>
       <p class="eyebrow">Built this way, live right now</p>
