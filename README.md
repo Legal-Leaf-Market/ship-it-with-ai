@@ -1,6 +1,6 @@
 # Ship It With AI
 
-Booking site for Jacob Kennedy's hands-on AI workshops and talks.
+Booking site for Jake Kennedy's hands-on AI workshops, talks and one-on-one consulting.
 
 - Live: Netlify, deployed automatically from `main`
 - Site files: `public/`
