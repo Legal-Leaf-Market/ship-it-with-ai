@@ -20,3 +20,4 @@ Plain HTML, no build step. Netlify publishes the `public/` folder on every push 
 5. Look: ink `#16182B`, paper `#F6F3EC`, coral `#FF6B4A`. Fonts: Space Grotesk (headings), Inter (body), JetBrains Mono (small labels). It matches the "Ship It With AI" slide deck.
 6. Work on a branch and open a pull request so Netlify makes a preview. Check desktop and phone before merging.
 7. After any change to the form, send one real test request on the live site and confirm it shows up in Netlify > Forms.
+8. Netlify only finds the form when "form detection" is on, and only on the next deploy after it's switched on. It was switched on 2026-11-26. If booking requests ever stop showing up, check Netlify > Forms first, then redeploy.
