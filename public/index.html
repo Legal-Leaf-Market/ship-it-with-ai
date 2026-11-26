@@ -247,7 +247,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>The loop learned on your work, not a sample project</li>
         </ul>
         <p class="for">For owners who want more than a listing, Heart of Columbus members included.</p>
-        <a class="pick" href="?session=consulting#book" data-pick="One-on-one consulting">Ask about consulting</a>
+        <a class="pick" href="?session=consulting#book" data-pick="Consulting">Ask about consulting</a>
       </div>
     </div>
   </div>
@@ -369,7 +369,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <select id="format" name="format">
             <option>Hands-on workshop</option>
             <option>Talk</option>
-            <option>One-on-one consulting</option>
+            <option>Consulting</option>
             <option>Not sure yet</option>
           </select>
         </div>
@@ -406,7 +406,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 (function () {
   var select = document.getElementById('format');
   if (!select) return;
-  var names = { workshop: 'Hands-on workshop', talk: 'Talk', consulting: 'One-on-one consulting' };
+  var names = { workshop: 'Hands-on workshop', talk: 'Talk', consulting: 'Consulting' };
   function pick(label) {
     for (var i = 0; i < select.options.length; i++) {
       if (select.options[i].text === label) { select.selectedIndex = i; return; }
