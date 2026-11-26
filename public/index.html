@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ship It With AI | Workshops and talks by Jacob Kennedy</title>
-<meta name="description" content="Hands-on workshops and talks on running real websites with AI, GitHub and Netlify, without typing code. Book a session for your team, group or event.">
+<title>Ship It With AI | Workshops, talks and consulting by Jake Kennedy</title>
+<meta name="description" content="Hands-on workshops, talks and one-on-one consulting on running real websites with AI, GitHub and Netlify, without typing code. From the creator of Heart of Columbus.">
 <meta property="og:title" content="Ship It With AI">
 <meta property="og:description" content="Learn the loop that runs real websites with AI. Everyone leaves with a live site.">
 <meta property="og:type" content="website">
@@ -69,7 +69,10 @@ header.top nav a.cta{color:var(--ink);background:var(--coral);padding:9px 18px;b
 .stat .label{color:var(--ink-soft);margin-top:10px;font-size:16px}
 
 /* formats */
-.formats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.format .pick{display:inline-block;margin-top:18px;font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;color:var(--coral-deep);text-decoration:none;border-bottom:2px solid currentColor;align-self:flex-start;padding-bottom:2px}
+.format.feature .pick{color:var(--coral)}
+.format .pick::after{content:" \2192"}
 .format{background:var(--paper);border-radius:20px;padding:36px;display:flex;flex-direction:column}
 .format.feature{background:var(--ink);color:var(--paper)}
 .format .tag{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--coral-deep);margin-bottom:14px}
@@ -108,11 +111,15 @@ header.top nav a.cta{color:var(--ink);background:var(--coral);padding:9px 18px;b
 .stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
 .chip{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;font-size:18px;padding:12px 20px;border-radius:999px;background:var(--paper);border:2px solid var(--ink)}
 .chip.pipe{background:var(--ink);color:var(--paper)}
+.spec-label{font-family:'JetBrains Mono','Courier New',monospace;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--coral-deep);margin-top:28px!important}
+.stack.specs{margin-top:14px}
+.stack.specs .chip{font-size:16px;padding:9px 16px}
 
 /* about */
 .about{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
 .about p+p{margin-top:16px}
 .about .body p{color:var(--ink-soft);font-size:19px}
+.about .body p.eyebrow,.about .body p.spec-label{color:var(--coral-deep);font-size:13px}
 .sites{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
 .sites li{border-bottom:1px solid rgba(22,24,43,.14)}
 .sites a{display:flex;justify-content:space-between;gap:16px;padding:18px 0;text-decoration:none}
@@ -142,6 +149,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:900px){
   section{padding:72px 0}
   .formats,.about,.book .wrap{grid-template-columns:1fr}
+  .format .for{margin-top:0}
   .about,.book .wrap{gap:40px}
   .loop{grid-template-columns:1fr 1fr}
   .step.last{grid-column:span 2}
@@ -178,7 +186,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="hero dark">
   <div class="orb" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow rise">Workshops and talks by Jacob Kennedy</p>
+    <p class="eyebrow rise">Workshops, talks and consulting by Jake Kennedy</p>
     <h1 class="rise2">Ship it<br>with AI</h1>
     <p class="lede rise3">I run real, live websites without typing code. Four AIs, GitHub and Netlify, in one loop. Book a session and your group learns the loop, the five rules it cost me to learn, and leaves with a site that's actually live.</p>
     <div class="actions rise3">
@@ -202,8 +210,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="alt" id="formats">
   <div class="wrap">
-    <p class="eyebrow">Two ways to book</p>
-    <h2>Pick the session that fits your room</h2>
+    <p class="eyebrow">Three ways to work with me</p>
+    <h2>Pick what fits</h2>
     <div class="formats">
       <div class="format feature">
         <p class="tag">Hands-on workshop</p>
@@ -215,6 +223,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>The whole loop done once, so you can repeat it alone</li>
         </ul>
         <p class="for">For small business groups, chambers of commerce, coworking spaces and teams.</p>
+        <a class="pick" href="?session=workshop#book" data-pick="Hands-on workshop">Book a workshop</a>
       </div>
       <div class="format">
         <p class="tag">Talk</p>
@@ -226,6 +235,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li>A live build on stage, from idea to published page</li>
         </ul>
         <p class="for">For conferences, meetups and lunch-and-learns.</p>
+        <a class="pick" href="?session=talk#book" data-pick="Talk">Book a talk</a>
+      </div>
+      <div class="format" id="consulting">
+        <p class="tag">One-on-one consulting</p>
+        <h3>Build it with me</h3>
+        <p class="meta">One business · in person or online</p>
+        <ul>
+          <li>Websites, custom light tools, small business ERPs and fintech, built with you on your real business</li>
+          <li>Your own guide file, written together, so your AI knows your rules</li>
+          <li>The loop learned on your work, not a sample project</li>
+        </ul>
+        <p class="for">For owners who want more than a listing, Heart of Columbus members included.</p>
+        <a class="pick" href="?session=consulting#book" data-pick="Consulting">Ask about consulting</a>
       </div>
     </div>
   </div>
@@ -301,9 +323,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap about">
     <div class="body">
       <p class="eyebrow">Who's teaching</p>
-      <h2>Jacob Kennedy</h2>
+      <h2>Jake Kennedy</h2>
       <p style="margin-top:24px">I run small businesses in Columbus, Indiana. I build and run their websites by talking to AI, not by typing code, and I keep a guide file full of every mistake I've made along the way.</p>
-      <p>That file, and the stories behind it, is what I teach. You won't get a list of buttons to click. You'll get the habits that keep a site working after the tools change.</p>
+      <p>The guide file, and the stories behind it, is what I teach. You won't get a list of buttons to click. You'll get the habits that keep a site working after the tools change.</p>
+      <p>Behind it: 10 years of accounting and technology experience, and a degree from IU Columbus, earned back when it was still IUPUC.</p>
+      <p class="spec-label">What I specialize in</p>
+      <div class="stack specs">
+        <span class="chip">Websites</span>
+        <span class="chip">Custom light tools</span>
+        <span class="chip">Small business ERPs</span>
+        <span class="chip">Financial technology (fintech)</span>
+      </div>
     </div>
     <div>
       <p class="eyebrow">Built this way, live right now</p>
@@ -322,7 +352,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div>
       <p class="eyebrow">Book a session</p>
       <h2>Your turn.</h2>
-      <p class="lede">Tell me about your group and when you're thinking. I'll get back to you with dates and a price.</p>
+      <p class="lede">Tell me about your group or business and when you're thinking. I'll get back to you with dates and a price.</p>
       <p class="lede" style="margin-top:14px">Based in Columbus, Indiana. In person or online.</p>
     </div>
     <form class="booking" name="booking" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company-url">
@@ -339,6 +369,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <select id="format" name="format">
             <option>Hands-on workshop</option>
             <option>Talk</option>
+            <option>Consulting</option>
             <option>Not sure yet</option>
           </select>
         </div>
@@ -364,10 +395,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <footer>
   <div class="wrap">
-    <span>Ship It With AI · Jacob Kennedy · Columbus, Indiana</span>
+    <span>Ship It With AI · Jake Kennedy · Columbus, Indiana</span>
     <a href="#book">Book a session</a>
   </div>
 </footer>
+
+<script>
+// "?session=consulting" (the link from Heart of Columbus) and the links on each
+// session card preselect that choice in the booking form.
+(function () {
+  var select = document.getElementById('format');
+  if (!select) return;
+  var names = { workshop: 'Hands-on workshop', talk: 'Talk', consulting: 'Consulting' };
+  function pick(label) {
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].text === label) { select.selectedIndex = i; return; }
+    }
+  }
+  var s = new URLSearchParams(location.search).get('session');
+  if (s && names[s]) pick(names[s]);
+  document.querySelectorAll('[data-pick]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      pick(a.getAttribute('data-pick'));
+      document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+      history.replaceState(null, '', '#book');
+      setTimeout(function () { document.getElementById('name').focus({ preventScroll: true }); }, 500);
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
