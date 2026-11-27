@@ -276,6 +276,19 @@
 .home-projects .pick { display: inline-block; color: var(--rust); margin-top: 14px; font-weight: 600; text-underline-offset: .22em; }
 .home-learning { padding-block: clamp(46px, 7vw, 88px); }
 .home-learning .story-links { margin-top: 0; }
+.kawaii-story-intro .home-editorial { align-items: center; }
+.kawaii-story-intro .lede { color: var(--mist); }
+.kawaii-story-intro figure {
+  width: min(100%, 360px);
+  justify-self: center;
+  padding: clamp(16px, 5vw, 36px);
+  background: radial-gradient(ellipse at 70% 20%, #f7d4e4, #ceb9ef);
+  border: 1px solid #e9c4e0;
+  box-shadow: 7px 7px 0 #986cc2;
+}
+.kawaii-story-intro img { display: block; width: 100%; height: auto; }
+.kawaii-story-section { padding-block: clamp(44px, 7vw, 96px); }
+.kawaii-story-copy { max-width: 720px; }
 @media (max-width: 820px) {
   .home-editorial, .home-project-lead { grid-template-columns: 1fr; }
   .home-intro .wrap {
@@ -294,6 +307,7 @@
   .intro-copy .lede { margin-top: 0; }
 }
 @media (max-width: 680px) {
+  .kawaii-story-intro figure { width: min(100%, 240px); justify-self: start; }
   .approach-steps { grid-template-columns: 1fr; }
   .approach-steps li::before { margin-bottom: 8px; }
   .home-projects { grid-template-columns: 1fr; }
