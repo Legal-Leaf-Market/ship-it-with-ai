@@ -43,30 +43,35 @@ Every service page has the same shape: who it is for, what you get, proof
 ## Business model: the offer ladder
 
 1. **Tutorials and demos** (free): bring in search traffic and show the work.
-2. **Fix one thing**: a small fixed quote. The easy first yes.
-3. **Build a project**: website, store, campaign or ERP, in steps with previews.
-4. **Keep it running**: ongoing care after launch. Recurring revenue.
-5. **One-on-one consulting**: for owners who want advice, not a build.
-6. **Workshops and talks**: groups, chambers, schools. Each one is a room of leads.
+2. **Free consultation and prototype** (`/free-prototype/`): Jake spends two to four hours
+   with the person who does the slow job ("Betty"), then builds a working prototype around
+   how she already works. The solo version of the Shadow Day from The Tech Therapists. This
+   is the front door: every header button and closing call to action points here.
+3. **Fix one thing**: a small fixed quote.
+4. **Build a project**: website, store, campaign or ERP, fixed price, in steps with previews.
+5. **Ongoing care** (`/services/ongoing-care/`): the managed services plan. Monthly,
+   quoted with the project, never required. Recurring revenue.
+6. **One-on-one consulting** and **workshops and talks**.
 
 Heart of Columbus feeds the top of this ladder (its Founders Club links to
 consulting) and is the strongest proof on the site.
 
-## Decisions for Jake
+## Decided by Jake (2026-11-27)
 
-- **Prices.** The site says every project is quoted first. Publishing "starting at" prices
-  per service usually lifts inquiries and qualifies them; add them when you are ready.
-- **"Keep it running" care plan.** New offer on /how-i-work/. It says "ask about it" and
-  has no price. Remove it if you don't want to offer ongoing care.
-- **Promises in /how-i-work/.** "Who owns it is agreed in writing", "you get the source files",
-  "logins in your name", "if you don't need me I will say so", "you approve every post".
-  Confirm each is how you want to work, or edit it.
+- Ongoing care is a real offer (managed services).
+- The promises stand: who owns the work is agreed in writing, the client gets the source
+  files, logins and hosting stay in the client's name, and "if you don't need me, I'll say so".
+- The first consultation and prototype are free: two to four hours with the person who does
+  the work, then a prototype built around their process. Don't make Betty bend or break.
+
+## Still open
+
+- **Dollar figures.** "Starting at" prices for a build and for ongoing care. Until Jake sets
+  them, pages say "fixed quote" and "monthly, quoted with the project".
 - **Testimonials.** None on the site, on purpose. Add real ones, in the client's words and
-  with permission, when you have them. They are the biggest missing trust signal.
-- **Google Business Profile.** A service area business profile for Ship It With AI
-  (no street address shown) is the single biggest local search win left, and it can't be done
-  from the code.
-- **Search Console.** Verify the domain and submit `/sitemap.xml` after the merge.
+  with permission, when you have them.
+- **Google Business Profile** and **Search Console**: set up outside the code. The profile
+  brief is kept out of this public repo because it holds a street address.
 
 ## Next pages worth writing
 
