@@ -419,7 +419,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       e.preventDefault();
       pick(a.getAttribute('data-pick'));
       document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
-      history.replaceState(null, '', '#book');
+      history.replaceState(null, '', a.getAttribute('href'));
       setTimeout(function () { document.getElementById('name').focus({ preventScroll: true }); }, 500);
     });
   });
