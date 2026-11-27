@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ship a first website | Ship It With AI</title>
+<meta name="description" content="Build a one-page site for a fictional furniture repair shop. You’ll need a text editor and a way to host static HTML.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/learn.css">
+<script src="/assets/menu.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/"><i aria-hidden="true"></i>Ship It With AI</a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="/#services">Services</a><a href="/#portfolio">My work</a><a href="/tutorials/" aria-current="page">Tutorials</a><a href="/demos/">Demos</a><a href="/workshops/">Workshops</a><a class="cta" href="/?session=consulting#book">Start a project</a></nav>
+    <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" hidden>Menu</button>
+  </div>
+  <dialog id="site-menu" aria-labelledby="menu-title">
+    <div class="drawer-top"><h2 id="menu-title">Menu</h2><form method="dialog"><button type="submit" autofocus>Close</button></form></div>
+    <nav class="drawer-nav" aria-label="Mobile navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/#portfolio">My work</a><a href="/tutorials/" aria-current="page">Tutorials</a><a href="/demos/">Demos</a><a href="/workshops/">Workshops</a><a class="cta" href="/?session=consulting#book">Start a project</a></nav>
+  </dialog>
+</header>
+<main id="main">
+<section class="dark page-intro"><div class="wrap">
+    <a class="back-link" href="/tutorials/">All tutorials</a>
+    <h1>Ship a first website</h1>
+    <p class="lede">Build a one-page site for a fictional furniture repair shop. You’ll need a text editor and a way to host static HTML.</p>
+  </div></section>
+<section class="wrap lesson">
+  <nav class="lesson-toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#step-1">Write the brief</a></li><li><a href="#step-2">Build the first version</a></li><li><a href="#step-3">Preview before publishing</a></li><li><a href="#step-4">Publish and verify</a></li></ol></nav>
+  <article class="lesson-copy"><section id="step-1" class="lesson-step"><h2>1. Write the brief</h2><p>Pick one visitor and one action. For this example, the visitor has a loose dining chair and wants an estimate. The action is an inquiry with a photo.</p><pre><code>Business: Mill Street Furniture Repair (fictional)
+Audience: Homeowners with loose or damaged chairs
+Goal: Get repair estimate requests
+Page: Headline, three services, pickup area, contact link
+Constraints: Plain HTML, mobile-first, no invented reviews
+Acceptance check: The estimate link opens an email draft</code></pre></section>
+<section id="step-2" class="lesson-step"><h2>2. Build the first version</h2><p>Ask your coding assistant to implement the brief in a single <code>index.html</code>. Supply business facts yourself and keep the first change small enough to review. Here’s a minimal starting file. Replace the example address with an inbox you control before releasing.</p><pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;title&gt;Mill Street Furniture Repair&lt;/title&gt;
+&lt;main&gt;
+  &lt;h1&gt;Get your favorite chair back in use&lt;/h1&gt;
+  &lt;p&gt;Loose joints, broken seats, and wood touch-ups.&lt;/p&gt;
+  &lt;p&gt;Ask about pickup in the Columbus area.&lt;/p&gt;
+  &lt;a href="mailto:repairs@example.com"&gt;Ask for an estimate&lt;/a&gt;
+&lt;/main&gt;
+&lt;/html&gt;</code></pre><p>Open the file in your browser. Add spacing, readable type, and one authentic photo only after the page structure works.</p></section>
+<section id="step-3" class="lesson-step"><h2>3. Preview before publishing</h2><p>Put your source in a repository or save a dated copy. Open a preview and test it at phone and desktop widths. Use Tab to reach the estimate link, confirm its destination, and make sure the page still reads if the photo fails to load. Check every claim and link before release.</p></section>
+<section id="step-4" class="lesson-step"><h2>4. Publish and verify</h2><p>Publish the tested folder to your static host, open the public URL in a private window, and repeat the estimate-link check. Send a clearly labeled test to an inbox you control and verify receipt. Save the previous working revision so you know what to restore if the release breaks.</p></section><a class="btn" href="/workshops/">See the hands-on workshop</a></article>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Ship It With AI · Jake Kennedy · Columbus, Indiana</span>
+    <a href="/?session=consulting#book">Start a project</a>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build a booking workflow | Ship It With AI</title>
+<meta name="description" content="Map one job from inquiry to confirmed booking, using the same pattern behind the Crossroads case study.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/learn.css">
+<script src="/assets/menu.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/"><i aria-hidden="true"></i>Ship It With AI</a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="/#services">Services</a><a href="/#portfolio">My work</a><a href="/tutorials/" aria-current="page">Tutorials</a><a href="/demos/">Demos</a><a href="/workshops/">Workshops</a><a class="cta" href="/?session=consulting#book">Start a project</a></nav>
+    <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" hidden>Menu</button>
+  </div>
+  <dialog id="site-menu" aria-labelledby="menu-title">
+    <div class="drawer-top"><h2 id="menu-title">Menu</h2><form method="dialog"><button type="submit" autofocus>Close</button></form></div>
+    <nav class="drawer-nav" aria-label="Mobile navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/#portfolio">My work</a><a href="/tutorials/" aria-current="page">Tutorials</a><a href="/demos/">Demos</a><a href="/workshops/">Workshops</a><a class="cta" href="/?session=consulting#book">Start a project</a></nav>
+  </dialog>
+</header>
+<main id="main">
+<section class="dark page-intro"><div class="wrap">
+    <a class="back-link" href="/tutorials/">All tutorials</a>
+    <h1>Build a booking workflow</h1>
+    <p class="lede">Map one job from inquiry to confirmed booking, using the same pattern behind the Crossroads case study.</p>
+  </div></section>
+<section class="wrap lesson">
+  <nav class="lesson-toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#step-1">Map the handoffs</a></li><li><a href="#step-2">Give the job one ID</a></li><li><a href="#step-3">Define who can update it</a></li><li><a href="#step-4">Test events out of order</a></li></ol></nav>
+  <article class="lesson-copy"><section id="step-1" class="lesson-step"><h2>1. Map the handoffs</h2><p>Start with one booking type. Write down who owns each step, which record they update, and what proves the step is complete.</p><table><thead><tr><th scope="col">Step</th><th scope="col">Evidence</th></tr></thead><tbody><tr><td>Inquiry received</td><td>Contact, requested date, and booking ID</td></tr><tr><td>Agreement prepared</td><td>Agreement version and date sent</td></tr><tr><td>Agreement signed</td><td>Signature and timestamp</td></tr><tr><td>Deposit confirmed</td><td>Amount, confirmation time, and payment reference</td></tr></tbody></table></section>
+<section id="step-2" class="lesson-step"><h2>2. Give the job one ID</h2><p>Use a stable booking ID across the inquiry, agreement, and payment records. Keep signature and deposit status separate. Decide what a confirmed booking means for your business. In this example, it requires both a signed agreement and a confirmed deposit.</p><pre><code>Booking: DEMO-001
+Agreement: Draft | Sent | Signed
+Deposit: Outstanding | Confirmed
+Confirmed booking: agreement signed AND deposit confirmed</code></pre></section>
+<section id="step-3" class="lesson-step"><h2>3. Define who can update it</h2><p>Let the team record when the agreement goes out and accept the signer’s action through the agreement tool. Confirm the deposit from a payment provider’s confirmed event or a staff reconciliation. Opening a payment link alone should leave the deposit outstanding. Keep a timestamp and reference for each change.</p></section>
+<section id="step-4" class="lesson-step"><h2>4. Test events out of order</h2><p>Try the deposit first, then the signature. Repeat each update to check that it doesn’t create a duplicate charge or record. Try a failed payment and an unsigned agreement. In all three cases, compare what staff see against the underlying records.</p></section><a class="btn" href="/demos/#booking-demo">Try the booking demo</a></article>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Ship It With AI · Jake Kennedy · Columbus, Indiana</span>
+    <a href="/?session=consulting#book">Start a project</a>
+  </div>
+</footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 Read this at the start of every session. Add every new lesson here, with the reason.
 
 ## What this is
-One-page project inquiry and booking site for Jake Kennedy ("Ship It With AI"). Lead with custom websites, small business ERP, and workflow tools. Use Crossroads as the in-house example and describe bookkeeping as work in progress until it is verified in use. Present workshops and talks as additional offers.
+Project inquiry, booking, and learning site for Jake Kennedy ("Ship It With AI"). Lead with custom websites, small business ERP, and workflow tools. Use Crossroads as the in-house example and describe bookkeeping as work in progress until it is verified in use. Present workshops and talks as additional offers.
 Plain HTML, no build step. Netlify publishes the `public/` folder on every push to `main`.
 
 ## Hosting
@@ -14,14 +14,16 @@ Plain HTML, no build step. Netlify publishes the `public/` folder on every push 
 - Every production deploy costs 15 Netlify credits (the team ran out on 2026-11-26). Batch changes into one merge, and put `[skip netlify]` in the commit message of a change that touches only this file or the README.
 
 ## Files
-- `public/index.html`: the whole page, styles included.
+- `public/index.html`: services, portfolio, and project inquiry.
+- `public/tutorials/`, `public/demos/`, and `public/workshops/`: separate learning pages.
+- `public/assets/`: shared styles, navigation, and local demo behavior.
 - `public/thanks.html`: where the booking form lands after sending.
 - `public/favicon.svg`: coral dot on ink.
 - `public/images/workbench.webp`: compressed hero photograph.
 - `netlify.toml`: tells Netlify to publish `public/`.
 
 ## Rules
-1. Keep it simple. One page. No frameworks, no build step, no new pages unless Jake asks.
+1. Keep it simple. Use static HTML pages and shared assets. Keep detailed teaching material off the homepage. No frameworks or build step.
 2. No long dashes (the em dash) anywhere in the copy. They read as machine-written. Use a period, a comma or a middle dot instead.
 3. The booking form is a Netlify Form named `booking`. Never rename the form or its field names (`name`, `email`, `organization`, `format`, `where`, `group-size`, `when`, `message`). Renaming hides past requests in the Netlify dashboard.
 4. Never publish Jake's personal email or phone on the page. Requests come in through the form only.

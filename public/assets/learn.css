@@ -1,0 +1,60 @@
+[hidden] { display: none !important; }
+.skip-link { position: absolute; z-index: 3; left: 14px; top: 12px; padding: 8px 12px; background: var(--orange); color: var(--ink); transform: translateY(-180%); }
+.skip-link:focus { transform: none; }
+header.top nav a[aria-current="page"] { color: var(--orange); text-decoration: underline; text-underline-offset: .35em; }
+.menu-toggle, .drawer-top button, .quiet-button { font: 700 1.15rem/1 var(--heading); background: transparent; color: inherit; border: 1px solid currentColor; padding: 10px 14px; min-height: 44px; cursor: pointer; }
+#site-menu { position: fixed; inset: 0 0 0 auto; margin: 0; width: min(88vw, 360px); max-width: none; height: 100%; height: 100dvh; max-height: none; overflow-y: auto; padding: 22px; background: #201a16; color: var(--paper); border: 0; border-left: 3px solid var(--orange); box-shadow: -16px 0 36px #0007; }
+#site-menu::backdrop { background: #000a; }
+#site-menu[open] { animation: enter-drawer .19s ease-out; }
+@keyframes enter-drawer { from { transform: translateX(100%); } }
+html:has(#site-menu[open]) { overflow: hidden; }
+.drawer-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 18px; }
+.drawer-top h2 { font-size: 2rem; }
+header.top .drawer-nav { display: grid; gap: 0; }
+header.top .drawer-nav a { font: 700 1.42rem/1.1 var(--heading); padding: 15px 0; border-top: 1px solid #ffffff26; }
+header.top .drawer-nav a.cta { width: fit-content; margin-top: 16px; padding: 10px 14px; }
+
+.learning-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.learning-grid h2 { font-size: clamp(2rem,4vw,3.1rem); letter-spacing: normal; }
+.page-intro { border-bottom: 5px solid var(--orange); padding-block: clamp(48px,8vw,90px); }
+.page-intro h1 { font-size: clamp(3.4rem,9vw,7.4rem); text-wrap: balance; }
+.page-grid { margin-top: 0; }
+.back-link { display: inline-block; color: var(--orange); margin-bottom: 19px; text-underline-offset: 4px; }
+.lesson { display: grid; grid-template-columns: minmax(170px, .32fr) minmax(0, 1fr); gap: clamp(26px,6vw,84px); }
+.lesson-toc { align-self: start; position: sticky; top: 22px; padding: 19px 20px; border: 1px solid var(--line); border-left: 4px solid var(--rust); background: var(--paper-2); }
+.lesson-toc h2 { font-size: 1.8rem; }
+.lesson-toc ol { margin: 12px 0 0; padding-left: 20px; }
+.lesson-toc a { display: inline-block; margin: 4px 0; }
+.lesson-step { padding: 0 0 33px; margin-bottom: 29px; border-bottom: 1px solid #342a2070; }
+.lesson-step h2 { font-size: clamp(2.25rem,5vw,3.65rem); text-wrap: initial; }
+.lesson-step p { margin-top: 16px; }
+.lesson-copy pre { margin: 18px 0; padding: 17px; background: var(--ink); color: var(--paper); white-space: pre-wrap; overflow-wrap: anywhere; font: 500 .84rem/1.65 var(--mono); }
+.lesson-copy table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+.lesson-copy td, .lesson-copy th { border-bottom: 1px solid #342a2060; padding: 8px; text-align: left; vertical-align: top; }
+.demo-section > .pick { display: inline-block; margin-top: 22px; }
+#campaign-demo .demo-section { padding-block: 0; }
+.demo-panel { border: 1px solid var(--line); border-top: 4px solid var(--rust); margin-top: 24px; padding: clamp(16px,4vw,32px); background: #fff8ee; box-shadow: 5px 5px 0 #342a2070; }
+.demo-status { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.demo-status div { background: var(--paper-2); padding: 10px 12px; }
+.demo-status dt { font: 500 .75rem/1.5 var(--mono); }
+.demo-status dd { margin: 0; font: 700 1.6rem/1.15 var(--heading); }
+.demo-controls { display: flex; flex-wrap: wrap; gap: 11px; }
+.demo-controls .btn:disabled { opacity: .54; background: var(--paper-2); border-color: #948476; box-shadow: none; transform: none; cursor: default; }
+.demo-event, #campaign-result:not(:empty) { margin-top: 18px; color: var(--ink-soft); }
+#campaign-result p { margin-top: 8px; }
+.workshop-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 17px; }
+.workshop-options h2 { font-size: clamp(2.65rem,5vw,4.35rem); }
+.workshop-options h3 { margin-top: 18px; }
+.workshop-options ol, .workshop-options ul { padding-left: 23px; }
+@media (max-width: 1000px) {
+  .menu-ready header.top .desktop-nav { display: none; }
+  html:not(.menu-ready) header.top .wrap { flex-wrap: wrap; padding-block: 12px; }
+  html:not(.menu-ready) header.top .desktop-nav { flex-wrap: wrap; }
+}
+@media (min-width: 1001px) { .menu-toggle { display: none; } }
+@media (max-width: 720px) {
+  .learning-grid, .lesson, .workshop-options { grid-template-columns: 1fr; }
+  .lesson-toc { position: static; }
+}
+@media (max-width: 440px) { .demo-status { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { #site-menu[open] { animation: none; } }
