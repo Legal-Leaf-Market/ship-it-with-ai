@@ -124,6 +124,11 @@ footer .footer-grid a { color: var(--mist); text-underline-offset: .2em; }
 footer .footer-grid a:hover { color: var(--orange); }
 .footer-mark { font: 700 1.4rem/1 var(--heading); text-transform: uppercase; letter-spacing: .08em; color: var(--paper); }
 .footer-h { font: 500 .72rem/1.5 var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--orange); }
+footer .footer-family { display: block; border-top: 1px solid #ffffff24; padding-top: 14px; margin-top: 4px; }
+footer .footer-family p { margin: 0 0 6px; max-width: 72em; }
+footer .footer-family a { color: var(--paper); text-underline-offset: .2em; }
+footer .footer-family a:hover { color: var(--orange); }
+footer .footer-tie { font-size: .8rem; opacity: .8; }
 footer .footer-grid a.footer-cta { width: fit-content; color: var(--ink); background: var(--orange); padding: 8px 12px; font-weight: 600; text-decoration: none; }
 @media (max-width: 1000px) {
   .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
