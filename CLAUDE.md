@@ -14,10 +14,15 @@ Plain HTML, no build step. Netlify publishes the `public/` folder on every push 
 - Every production deploy costs 15 Netlify credits (the team ran out on 2026-11-26). Batch changes into one merge, and put `[skip netlify]` in the commit message of a change that touches only this file or the README.
 
 ## Files
-- `public/index.html`: services, portfolio, and project inquiry.
+- `public/index.html`: Jake's intro, services, portfolio, and project inquiry (the booking form lives only here).
+- `public/services/`: one page per service. `public/work/`: all projects and the Heart of Columbus case study. `public/how-i-work/`: process, ways to work together, FAQ.
 - `public/tutorials/`, `public/demos/`, and `public/workshops/`: separate learning pages.
 - `public/assets/`: shared styles, navigation, and local demo behavior.
-- `public/thanks.html`: where the booking form lands after sending.
+- `public/thanks.html` and `public/404.html`: noindex pages in the site's own chrome.
+- `public/robots.txt`, `public/sitemap.xml`: list every indexable page in the sitemap.
+- `public/images/og.png`: the 1200x630 share image used by every page.
+- `scripts/check-site.mjs`: run `node scripts/check-site.mjs` before every merge.
+- `docs/seo-audit.md`: the audit, page plan and open decisions for Jake.
 - `public/favicon.svg`: coral dot on ink.
 - `public/images/workbench.webp`: compressed hero photograph.
 - `netlify.toml`: tells Netlify to publish `public/`.
@@ -31,3 +36,6 @@ Plain HTML, no build step. Netlify publishes the `public/` folder on every push 
 6. Work on a branch and open a pull request so Netlify makes a preview. Check desktop and phone before merging.
 7. After any change to the form, send one real test request on the live site and confirm it shows up in Netlify > Forms.
 8. Netlify only finds the form when "form detection" is on, and only on the next deploy after it's switched on. It was switched on 2026-11-26. If booking requests ever stop showing up, check Netlify > Forms first, then redeploy.
+9. Every page has its own `<title>`, meta description, `<link rel="canonical">` to https://shipitwithai.heartofcolumbus.shop plus its path, Open Graph tags with `og:image`, exactly one `<h1>`, and a JSON-LD block that states only what the page shows. Add each new page to `sitemap.xml`. `node scripts/check-site.mjs` fails otherwise. Reason: the site had none of this before 2026-11-27 and search engines saw duplicates of every page.
+10. No invented testimonials, client counts, prices or promises. Prices and new commitments are Jake's to set; until then pages say "quoted before it starts". Reason: the same rule as Heart of Columbus, and the site sells trust.
+11. The header and footer are repeated in every page. When the menu changes, change it in every file (grep for `desktop-nav`, `drawer-nav` and `footer-grid`).
