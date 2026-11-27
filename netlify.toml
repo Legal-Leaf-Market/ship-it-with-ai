@@ -1,2 +1,27 @@
 [build]
   publish = "public"
+
+# One address for search engines: the Netlify subdomain forwards to the custom
+# domain. Deploy Previews use their own deploy-preview-N-- hosts and are untouched.
+[[redirects]]
+  from = "https://shipitwithai.netlify.app/*"
+  to = "https://shipitwithai.heartofcolumbus.shop/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/thanks"
+  [headers.values]
+    X-Robots-Tag = "noindex"
