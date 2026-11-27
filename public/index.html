@@ -25,8 +25,11 @@
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/learn.css">
 <link rel="stylesheet" href="/assets/home.css">
+<link rel="stylesheet" href="/assets/project-brief.css">
 <script src="/assets/menu.js" defer></script>
 <script src="/assets/ask-jake.js" defer></script>
+<script src="/assets/project-brief.js" type="module"></script>
+<script src="/assets/project-attachments.js" type="module"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://shipitwithai.heartofcolumbus.shop/#business","name":"Ship It With AI","url":"https://shipitwithai.heartofcolumbus.shop/","image":"https://shipitwithai.heartofcolumbus.shop/images/og.png","logo":"https://shipitwithai.heartofcolumbus.shop/favicon.svg","description":"Websites, marketing, small business ERP software and custom tools for small businesses in Columbus, Indiana, plus hands-on AI workshops and talks.","founder":{"@id":"https://shipitwithai.heartofcolumbus.shop/#jake"},"areaServed":[{"@type":"City","name":"Columbus","containedInPlace":{"@type":"State","name":"Indiana"}},{"@type":"AdministrativeArea","name":"Bartholomew County, Indiana"}],"knowsAbout":["Small business websites","Small business ERP","Booking and deposit workflows","Bank reconciliation","Sage Intacct","NetSuite","Social media marketing","AI assisted software development"]},{"@type":"Person","@id":"https://shipitwithai.heartofcolumbus.shop/#jake","name":"Jake Kennedy","jobTitle":"Builder and consultant","worksFor":{"@id":"https://shipitwithai.heartofcolumbus.shop/#business"},"homeLocation":{"@type":"City","name":"Columbus, Indiana"},"alumniOf":{"@type":"CollegeOrUniversity","name":"IUPUC (now IU Columbus)"},"url":"https://shipitwithai.heartofcolumbus.shop/"},{"@type":"WebSite","@id":"https://shipitwithai.heartofcolumbus.shop/#site","name":"Ship It With AI","url":"https://shipitwithai.heartofcolumbus.shop/","publisher":{"@id":"https://shipitwithai.heartofcolumbus.shop/#business"},"inLanguage":"en-US"}]}</script>
 </head>
 <body>
@@ -62,7 +65,7 @@
         <a class="btn ghost" href="#work">See my work</a>
       </div>
       <div class="intro-help">
-        <a href="?session=consulting#book" data-pick="Consulting">Talk through a problem</a>
+        <a href="#project-brief">Build a project brief</a>
         <button class="ask-jake" type="button" data-explain="topics" aria-haspopup="dialog" aria-controls="jake-help" hidden>Ask Jake <span class="intro-arrow" aria-hidden="true"></span></button>
       </div>
     </div>
@@ -85,6 +88,79 @@
       <li><h3>Find the bottleneck</h3></li>
       <li><h3>Build the fix</h3></li>
     </ol>
+  </div>
+</section>
+
+<section id="project-brief" class="project-brief alt" aria-labelledby="project-brief-title">
+  <div class="wrap brief-layout">
+    <div class="brief-intro">
+      <h2 id="project-brief-title">What would you fix first?</h2>
+      <p>Pick a starting point. I’ll ask a few questions about what happens today and what you’d like to change. You’ll get a project brief you can edit and send me for a more useful reply.</p>
+      <a href="?session=consulting#book" data-pick="Consulting">Prefer to write me a note?</a>
+    </div>
+    <form class="brief-card" id="brief-builder" hidden>
+      <div class="brief-progress">
+        <span id="brief-step-label">Step 1 of 4</span>
+        <progress id="brief-progress" value="1" max="4" aria-label="Project brief progress"></progress>
+      </div>
+
+      <div data-brief-step>
+        <h3 tabindex="-1">Where should we start?</h3>
+        <fieldset class="brief-choices">
+          <legend>Pick the one that sounds closest.</legend>
+          <label><input type="radio" name="path" value="website" required><span><strong>My website should do more</strong><small>Get found, answer questions, or turn visits into inquiries.</small></span></label>
+          <label><input type="radio" name="path" value="booking"><span><strong>Bookings keep slipping</strong><small>Pull inquiries, dates, agreements, and deposits together.</small></span></label>
+          <label><input type="radio" name="path" value="workflow"><span><strong>We keep doing the same work</strong><small>Cut down on copying, handoffs, and follow-ups.</small></span></label>
+          <label><input type="radio" name="path" value="reporting"><span><strong>The numbers don’t line up</strong><small>Get reports, payouts, or records to agree.</small></span></label>
+          <label><input type="radio" name="path" value="other"><span><strong>Something else is getting in the way</strong><small>Tell me what happened and we’ll start there.</small></span></label>
+        </fieldset>
+      </div>
+
+      <div data-brief-step hidden>
+        <h3 id="brief-path-title" tabindex="-1">Walk me through it.</h3>
+        <p class="brief-hint">A recent example helps me see where the work gets stuck. Every answer on this step is optional.</p>
+        <label for="brief-bottleneck">Where does it usually get stuck?</label>
+        <select id="brief-bottleneck" name="bottleneck"></select>
+        <label for="brief-example" id="brief-example-label">What happened last time?</label>
+        <textarea id="brief-example" name="example" rows="3" maxlength="800"></textarea>
+        <label for="brief-tools" id="brief-tools-label">What do you use today?</label>
+        <input id="brief-tools" name="tools" type="text" maxlength="240">
+        <label for="brief-frequency">How often does it come up?</label>
+        <select id="brief-frequency" name="frequency">
+          <option value="">Choose if you know</option>
+          <option>Several times a day</option><option>A few times a week</option><option>A few times a month</option><option>Seasonally or for one upcoming project</option>
+        </select>
+      </div>
+
+      <div data-brief-step hidden>
+        <h3 tabindex="-1">Picture it working.</h3>
+        <p class="brief-hint">Tell me what would make the first version worth using. Answer what you know.</p>
+        <label for="brief-goal" id="brief-goal-label">What would a good outcome look like?</label>
+        <textarea id="brief-goal" name="goal" rows="3" maxlength="800"></textarea>
+        <label for="brief-users">Who needs it to work?</label>
+        <input id="brief-users" name="users" type="text" maxlength="200" placeholder="You, the front desk, customers, a bookkeeper…">
+        <label for="brief-limits">What does it need to fit around?</label>
+        <textarea id="brief-limits" name="limits" rows="2" maxlength="400" placeholder="A tool you need to keep, a deadline, a budget range, or a rule"></textarea>
+        <label for="brief-timing">How soon would you like to tackle it?</label>
+        <select id="brief-timing" name="timing">
+          <option value="">Choose if you know</option>
+          <option>As soon as practical</option><option>In the next month or two</option><option>Later this year</option><option>Just exploring</option>
+        </select>
+      </div>
+
+      <div data-brief-step hidden>
+        <h3 tabindex="-1">Check your brief.</h3>
+        <p class="brief-hint">Next you can edit the brief, add your email, and attach an example before deciding whether to send it.</p>
+        <label for="brief-review">Your project brief</label>
+        <textarea id="brief-review" rows="10" readonly></textarea>
+        <label class="brief-updates"><input id="brief-updates" type="checkbox"> I’d also like to hear about future demos and workshops.</label>
+      </div>
+
+      <div class="brief-actions">
+        <button class="brief-back" id="brief-back" type="button" hidden>Back</button>
+        <button class="btn" id="brief-next" type="submit">Next</button>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -227,7 +303,7 @@
       <h2>Drop me a note.</h2>
       <p class="lede">A line or two is plenty. Tell me what you wish worked better.</p>
     </div>
-    <form class="booking" name="booking" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company-url">
+    <form class="booking" name="booking" method="POST" action="/thanks" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="company-url">
       <input type="hidden" name="subject" value="New Ship It With AI booking request">
       <p class="hidden"><label>Leave this empty <input name="company-url"></label></p>
       <div class="row">
@@ -260,6 +336,27 @@
         <div class="field"><label for="when">When <span class="opt">(dates or month)</span></label><input id="when" name="when" type="text"></div>
       </div>
       <div class="field"><label for="message">Tell me what you have in mind <span class="opt">(optional)</span></label><textarea id="message" name="message" placeholder="For a project, start with the task you’d like to make easier."></textarea></div>
+      <details class="brief-attachments" id="brief-attachments">
+        <summary>Have an example? Attach it or show me.</summary>
+        <p id="attachment-help">Add up to three files. Screenshots, spreadsheets, PDFs, videos and other formats are welcome. Up to 7 MB total, including a recording. Use sample or redacted files and leave out passwords, customer details, and payment data.</p>
+        <div class="field"><label for="project-file-1">First file</label><input id="project-file-1" type="file" name="project-file-1" aria-describedby="attachment-help attachment-size"></div>
+        <div class="field"><label for="project-file-2">Second file</label><input id="project-file-2" type="file" name="project-file-2" aria-describedby="attachment-help attachment-size"></div>
+        <div class="field"><label for="project-file-3">Third file</label><input id="project-file-3" type="file" name="project-file-3" aria-describedby="attachment-help attachment-size"></div>
+        <p id="attachment-size" role="status"></p>
+        <input type="file" name="screen-recording" id="screen-recording" hidden tabindex="-1">
+        <div id="screen-recorder" class="brief-recorder" hidden>
+          <h3>Show me in 30 seconds.</h3>
+          <p>Pick a tab or window and show me where the work gets stuck. The recording has no audio. You can watch it before you attach it.</p>
+          <div class="recorder-actions">
+            <button type="button" id="record-start">Record my screen</button>
+            <button type="button" id="record-stop" hidden>Stop recording</button>
+            <button type="button" id="record-attach" hidden>Attach recording</button>
+            <button type="button" id="record-remove" hidden>Remove recording</button>
+          </div>
+          <video id="record-preview" controls playsinline hidden aria-label="Preview your screen recording"></video>
+          <p id="record-status" role="status"></p>
+        </div>
+      </details>
       <button class="btn" type="submit">Send inquiry</button>
     </form>
   </div>

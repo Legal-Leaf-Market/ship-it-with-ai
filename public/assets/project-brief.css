@@ -1,0 +1,89 @@
+.project-brief { padding-block: clamp(44px, 7vw, 88px); }
+.brief-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: clamp(22px, 6vw, 85px);
+}
+.brief-intro h2 { font-size: clamp(2.65rem, 5vw, 4.6rem); }
+.brief-intro p { margin-block: 16px 8px; max-width: 42ch; }
+.brief-intro a { color: var(--rust); font-weight: 600; text-underline-offset: .2em; }
+.brief-card {
+  padding: clamp(15px, 3vw, 32px);
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  box-shadow: 5px 5px 0 #a95b39;
+}
+.brief-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #78645178;
+  color: var(--ink-soft);
+  font: 500 .76rem/1.4 var(--mono);
+}
+.brief-progress progress { width: min(42%, 130px); accent-color: var(--rust); }
+.brief-card h3 { font-size: clamp(1.9rem, 4vw, 2.65rem); }
+.brief-card h3:focus { outline: none; }
+.brief-choices { margin: 12px 0 0; padding: 0; border: 0; min-width: 0; }
+.brief-choices legend, .brief-hint { margin-bottom: 11px; color: var(--ink-soft); }
+.brief-hint { margin-top: 9px; }
+.brief-choices label {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 12px;
+  margin-top: 7px;
+  border: 1px solid #78645178;
+  background: #fff9ec;
+  cursor: pointer;
+}
+.brief-choices label:has(:checked) { border-color: var(--rust); background: #ffdfbd; }
+.brief-choices small { display: block; color: var(--ink-soft); line-height: 1.35; }
+.brief-card input[type="radio"], .brief-updates input {
+  flex: none;
+  width: 1.1rem;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--rust);
+}
+.brief-choices label > span { min-width: 0; }
+.brief-card [data-brief-step] > label { display: block; margin: 12px 0 4px; font-weight: 600; }
+.brief-card select, .brief-card textarea, .brief-card input[type="text"] {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #786451a0;
+  background: #fff9ec;
+  color: var(--ink);
+  font: inherit;
+}
+.brief-card textarea { resize: vertical; }
+.brief-card .brief-updates { font-weight: 400; font-size: .9rem; }
+.brief-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; margin-top: 20px; }
+.brief-actions button { cursor: pointer; }
+.brief-back, .recorder-actions button {
+  min-height: 44px;
+  padding: 7px 12px;
+  border: 1px solid currentColor;
+  background: none;
+  color: inherit;
+  font: 600 .89rem/1.3 Inter, Arial, sans-serif;
+  cursor: pointer;
+}
+.brief-attachments { margin-block: 9px 14px; border: 1px solid #ffffff48; padding: 10px 13px; }
+.brief-attachments summary { color: var(--paper); font-weight: 600; cursor: pointer; }
+.brief-attachments p { margin-block: 9px; color: var(--mist); font-size: .88rem; }
+.brief-attachments .field { margin-top: 9px; }
+.brief-attachments input[type="file"] { max-width: 100%; }
+.brief-recorder { margin-top: 16px; padding-top: 13px; border-top: 1px solid #ffffff48; }
+.brief-recorder h3 { font-size: 1.65rem; }
+.recorder-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.brief-recorder video { width: 100%; max-height: 260px; margin-top: 10px; background: #161210; }
+@media (max-width: 760px) {
+  .brief-layout { grid-template-columns: minmax(0, 1fr); }
+}
