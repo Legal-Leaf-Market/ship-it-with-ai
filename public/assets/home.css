@@ -115,7 +115,6 @@
   text-decoration: underline;
   text-underline-offset: .2em;
 }
-.approach-heading .explain-link { margin-top: 8px; }
 .jake-dialog {
   width: min(480px, calc(100% - 36px));
   max-height: calc(100% - 36px);
@@ -314,65 +313,6 @@
 .home-project-lead h3 { font-size: clamp(2.5rem, 5vw, 4.25rem); }
 .home-project h3 { font-size: 2rem; }
 .home-projects .pick { display: inline-block; color: var(--rust); margin-top: 14px; font-weight: 600; text-underline-offset: .22em; }
-.workflow-sample { padding-block: clamp(46px, 7vw, 88px); }
-.workflow-sample .home-editorial { align-items: end; }
-.workflow-console:not([hidden]) {
-  display: grid;
-  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
-  margin-top: 26px;
-  border: 2px solid var(--ink);
-  box-shadow: 5px 5px 0 #a95b39;
-}
-.workflow-options {
-  display: grid;
-  grid-auto-rows: min-content;
-  gap: 1px;
-  background: var(--ink);
-}
-.workflow-options button {
-  min-height: 52px;
-  padding: 9px 16px;
-  border: 0;
-  border-left: 4px solid transparent;
-  background: #2b251f;
-  color: var(--paper);
-  font: 700 clamp(1.16rem, 2.6vw, 1.65rem)/1.15 var(--heading);
-  text-align: left;
-  cursor: pointer;
-}
-.workflow-options button:hover { background: #4b3529; }
-.workflow-options button[aria-pressed="true"] {
-  border-color: var(--rust);
-  background: var(--orange);
-  color: var(--ink);
-}
-.workflow-options button:focus-visible { outline-offset: -5px; }
-.workflow-record {
-  padding: clamp(16px, 3vw, 34px);
-  background: var(--paper);
-}
-.workflow-record-heading {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px 18px;
-  margin-bottom: 10px;
-}
-.workflow-record-heading p {
-  color: var(--ink-soft);
-  font: 500 .75rem/1.4 var(--mono);
-  text-transform: uppercase;
-}
-.workflow-result {
-  min-height: 108px;
-  margin-block: 16px;
-  padding: 11px 15px;
-  border-left: 4px solid var(--rust);
-  background: #e8d8c1;
-}
-.workflow-result strong { display: block; margin-bottom: 4px; }
-.workflow-record .btn { cursor: pointer; }
 .kawaii-story-intro .home-editorial { align-items: center; }
 .kawaii-story-intro .lede { color: var(--mist); }
 .kawaii-story-intro figure {
@@ -414,14 +354,6 @@
   .approach-steps li::before { margin-bottom: 8px; }
   .home-projects { grid-template-columns: 1fr; }
   .home-project + .home-project { padding-top: 18px; border-top: 1px solid #78645178; }
-  .workflow-console:not([hidden]) { grid-template-columns: minmax(0, 1fr); }
-  .workflow-options { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .workflow-options button {
-    padding-inline: 6px;
-    border-left-width: 0;
-    border-bottom: 3px solid transparent;
-    text-align: center;
-  }
 }
 @media (max-width: 390px) {
   .intro-actions .actions { gap: 9px; }

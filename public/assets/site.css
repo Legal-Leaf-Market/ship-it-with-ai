@@ -130,7 +130,6 @@ header.top nav a.cta:hover { background: #ffa376; }
 .project-art figcaption { margin-top: 15px; color: var(--ink-soft); font: 500 .72rem/1.5 var(--mono); }
 
 
-#formats { border-top: 1px solid #342a2060; }
 
 .book { border-top: 5px solid var(--orange); }
 .book .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(32px, 7vw, 96px); }
