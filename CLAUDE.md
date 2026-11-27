@@ -3,7 +3,7 @@
 Read this at the start of every session. Add every new lesson here, with the reason.
 
 ## What this is
-One-page booking site for Jake Kennedy's AI workshops, talks and consulting ("Ship It With AI").
+One-page project inquiry and booking site for Jake Kennedy ("Ship It With AI"). Lead with custom websites, small business ERP, and workflow tools. Use Crossroads as the in-house example and describe bookkeeping as work in progress until it is verified in use. Present workshops and talks as additional offers.
 Plain HTML, no build step. Netlify publishes the `public/` folder on every push to `main`.
 
 ## Hosting
