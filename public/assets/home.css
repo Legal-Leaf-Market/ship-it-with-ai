@@ -86,7 +86,6 @@
   text-underline-offset: .2em;
 }
 .approach-heading .explain-link { margin-top: 8px; }
-.explain-blue { color: #174b83; }
 .jake-dialog {
   width: min(480px, calc(100% - 36px));
   max-height: calc(100% - 36px);
@@ -98,7 +97,6 @@
   box-shadow: 6px 6px 0 #0008;
 }
 .jake-dialog::backdrop { background: #120d09c4; }
-.jake-dialog-blue { border-top-color: #2369b1; }
 .jake-dialog-controls { display: flex; align-items: center; gap: 12px; }
 .jake-dialog-controls form { margin-left: auto; }
 .jake-dialog h2 { font-size: clamp(2.2rem, 7vw, 3rem); margin: 5px 0 13px; }

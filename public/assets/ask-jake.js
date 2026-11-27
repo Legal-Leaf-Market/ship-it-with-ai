@@ -12,7 +12,6 @@ if (guide && content && allQuestions && typeof guide.showModal === 'function') {
     const topic = document.getElementById('explain-' + button.dataset.explain);
     if (!(topic instanceof HTMLTemplateElement)) return;
 
-    guide.classList.toggle('jake-dialog-blue', button.dataset.explain === 'police');
     allQuestions.hidden = button.dataset.explain === 'topics';
     content.replaceChildren(topic.content.cloneNode(true));
     if (!guide.open) guide.showModal();
