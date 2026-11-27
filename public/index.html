@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Custom Websites &amp; Small Business ERP | Ship It With AI</title>
-<meta name="description" content="Jake Kennedy builds custom websites, booking and payment workflows, and small business ERP software in Columbus, Indiana. Workshops and talks are also available.">
+<meta name="description" content="Jake Kennedy builds websites, marketing campaigns, and small business ERP software in Columbus, Indiana. Get help with social, commerce, payments, and the books.">
 <meta property="og:title" content="Ship It With AI | Custom Websites &amp; Small Business ERP">
-<meta property="og:description" content="Custom websites and software for small businesses, from the first inquiry through payment and bookkeeping.">
+<meta property="og:description" content="Custom websites, marketing, and software for small businesses, from the first inquiry through payment and bookkeeping.">
 <meta property="og:type" content="website">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,14 +84,12 @@ header.top nav a.cta{color:var(--ink);background:var(--coral);padding:9px 18px;b
 .about{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
 .about p+p{margin-top:16px}
 .about .body p{color:var(--ink-soft);font-size:19px}
-.about h2 + p,.projects-heading{margin-bottom:16px}
-.about h2 + p{margin-top:18px}
-.sites{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
-.sites li{border-bottom:1px solid rgba(22,24,43,.14)}
-.sites a{display:flex;justify-content:space-between;gap:16px;padding:18px 0;text-decoration:none}
-.sites a:hover b{color:var(--coral-deep)}
-.sites b{font-family:'Space Grotesk',Arial,sans-serif;font-size:21px}
-.sites span{color:var(--ink-soft);font-size:15px;text-align:right}
+.about h2 + p,.about h3 + p{margin-top:18px}
+.services,.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.portfolio-lead{grid-column:1/-1}
+.portfolio-lead .detail{max-width:67ch}
+.portfolio-links{display:flex;flex-wrap:wrap;gap:0 24px}
+#formats{border-top:1px solid rgba(22,24,43,.12)}
 
 /* booking */
 .book{position:relative;overflow:hidden}
@@ -126,8 +124,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .hero .orb{width:260px;right:-150px;top:auto;bottom:-140px}
   form.booking{padding:24px}
   .format{padding:28px}
-  .sites a{flex-direction:column;gap:2px}
-  .sites span{text-align:left}
 }
 </style>
 </head>
@@ -138,7 +134,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a class="mark" href="#"><i></i>Ship It With AI</a>
     <nav aria-label="Main navigation">
       <a href="#services">Services</a>
-      <a href="#work">My work</a>
+      <a href="#portfolio">My work</a>
       <a href="#formats">Workshops &amp; talks</a>
       <a class="cta" href="?session=consulting#book" data-pick="Consulting">Start a project</a>
     </nav>
@@ -149,12 +145,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="hero dark">
   <div class="orb" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow rise">Jake Kennedy · Columbus, Indiana</p>
-    <h1 class="rise2">Custom websites and software for small businesses.</h1>
-    <p class="lede rise3">I build websites that bring in inquiries and software that helps you handle what happens next. That can mean fixing one stubborn workflow or connecting bookings, payments, and the books in a small business ERP.</p>
+    <p class="eyebrow rise">Jake Kennedy · Hoosier born · Columbus, Indiana</p>
+    <h1 class="rise2">Bring me the pieces. I’ll build what you need.</h1>
+    <p class="lede rise3">I build websites, marketing, and custom software for small businesses. Bring me the tools you already use and the work that’s taking too long. I’ll help you bring in customers, cut busywork, and look for ways to lower what you spend on technology.</p>
     <div class="actions rise3">
       <a class="btn" href="?session=consulting#book" data-pick="Consulting">Tell me what you need</a>
-      <a class="btn ghost" href="#work">See what I’ve built</a>
+      <a class="btn ghost" href="#portfolio">See what I’ve built</a>
     </div>
   </div>
 </section>
@@ -173,8 +169,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <p class="detail">Give customers a clear path to inquire, book, or buy. I build service websites, storefronts, and directories, and can connect the booking or checkout tools you already use.</p>
       </article>
       <article class="format">
+        <h3>Marketing, Instagram, and Facebook</h3>
+        <p class="detail">Get clear on what you sell, then make that message work across your website, Instagram, Facebook, and print. I can build campaign pages, create social posts and sales materials, and connect them to a way for people to inquire or buy.</p>
+      </article>
+      <article class="format">
         <h3>Custom tools and automation</h3>
-        <p class="detail">Turn a recurring spreadsheet, a manual reminder, or a messy handoff into a tool your team can use. Projects can include dashboards, payment tracking, data imports, and integrations.</p>
+        <p class="detail">Turn a recurring spreadsheet, a manual reminder, or a messy handoff into a tool your team can use. I build dashboards and integrations, and can help connect payment records, transaction imports, and accounting reports.</p>
       </article>
     </div>
   </div>
@@ -195,19 +195,47 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
+<section id="portfolio" class="alt">
+  <div class="wrap">
+    <h2>What I’ve built</h2>
+    <div class="formats portfolio-grid">
+      <article class="format portfolio-lead">
+        <h3>Heart of Columbus</h3>
+        <p class="detail">I built a searchable guide to Columbus’s independent businesses, with listings that send people directly to a shop’s ordering, booking, or storefront. I also built storefront demos for local owners.</p>
+        <p class="detail">The work goes beyond the site. I researched businesses’ Instagram and Facebook profiles, made illustrated listing artwork, and laid out the 16-page December print edition. It’s one project that brings together local research, editorial design, social discovery, and the tools owners use to take orders.</p>
+        <a class="pick" href="https://heartofcolumbus.shop/">Explore Heart of Columbus</a>
+      </article>
+      <article class="format">
+        <h3>Legal Leaf Market</h3>
+        <p class="detail">I built a searchable product catalog that brings listings from multiple storefronts together. I also built the launch site for Legal Leaf Cafe &amp; Market, a neighborhood cafe and market concept.</p>
+        <div class="portfolio-links">
+          <a class="pick" href="https://legalleafmarket.shop/shop">See the shop</a>
+          <a class="pick" href="https://legalleafmarket.shop/">See the cafe concept</a>
+        </div>
+      </article>
+      <article class="format">
+        <h3>Social and sales campaigns</h3>
+        <p class="detail">For Crossroads, I built a set of Instagram posts that explain the day rate and lead into an intro call, plus wedding and corporate brochures that are ready to share or print. I can help you give your Instagram and Facebook pages the same clear path from a post to an inquiry.</p>
+      </article>
+      <article class="format">
+        <h3>Kawaii Katz</h3>
+        <p class="detail">An online storefront with a product catalog, shopping cart, and original visual identity.</p>
+        <a class="pick" href="https://kawaiikatz.heartofcolumbus.shop">See the storefront</a>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <div class="wrap about">
     <div class="body">
       <h2>Jake Kennedy</h2>
-      <p>I run small businesses in Columbus, Indiana. I bring 10 years of accounting and technology experience to the work, along with a degree from IU Columbus, earned when it was IUPUC.</p>
-      <p>We’ll start by looking at how the work gets done today. I’ll show you a working preview so you can try it with a real task before we put it into use.</p>
+      <p>I’m a blue-collar Hoosier, born in Indiana and based in Columbus. Think of me as the plumber of the AI world. I figure out where the work is getting stuck, put the pieces together, and make it easier to run.</p>
+      <p>Bring me the spreadsheet, the website, or the tools you already pay for. I’ll look for what we can use and show you a working preview before you commit to putting it into use.</p>
     </div>
-    <div>
-      <h3 class="projects-heading">More of my work</h3>
-      <ul class="sites">
-        <li><a href="https://heartofcolumbus.shop"><b>Heart of Columbus</b><span>Searchable local directory with business listings and links to book, order, or shop directly</span></a></li>
-        <li><a href="https://kawaiikatz.heartofcolumbus.shop"><b>Kawaii Katz</b><span>An online storefront with a product catalog and a shopping cart</span></a></li>
-      </ul>
+    <div class="body">
+      <h3>Accounting and fintech experience</h3>
+      <p>I have more than a decade of accounting and technology experience. I’ve worked on bookkeeping, reconciliations, and month-end close. In fintech, I’ve helped teams connect transaction feeds to general ledgers in Sage Intacct and NetSuite. I bring that experience to the software I build for business owners.</p>
     </div>
   </div>
 </section>
