@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="/assets/home.css">
 <script src="/assets/menu.js" defer></script>
 <script src="/assets/ask-jake.js" defer></script>
+<script src="/assets/workflow-sample.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://shipitwithai.heartofcolumbus.shop/#business","name":"Ship It With AI","url":"https://shipitwithai.heartofcolumbus.shop/","image":"https://shipitwithai.heartofcolumbus.shop/images/og.png","logo":"https://shipitwithai.heartofcolumbus.shop/favicon.svg","description":"Websites, marketing, small business ERP software and custom tools for small businesses in Columbus, Indiana, plus hands-on AI workshops and talks.","founder":{"@id":"https://shipitwithai.heartofcolumbus.shop/#jake"},"areaServed":[{"@type":"City","name":"Columbus","containedInPlace":{"@type":"State","name":"Indiana"}},{"@type":"AdministrativeArea","name":"Bartholomew County, Indiana"}],"knowsAbout":["Small business websites","Small business ERP","Booking and deposit workflows","Bank reconciliation","Sage Intacct","NetSuite","Social media marketing","AI assisted software development"]},{"@type":"Person","@id":"https://shipitwithai.heartofcolumbus.shop/#jake","name":"Jake Kennedy","jobTitle":"Builder and consultant","worksFor":{"@id":"https://shipitwithai.heartofcolumbus.shop/#business"},"homeLocation":{"@type":"City","name":"Columbus, Indiana"},"alumniOf":{"@type":"CollegeOrUniversity","name":"IUPUC (now IU Columbus)"},"url":"https://shipitwithai.heartofcolumbus.shop/"},{"@type":"WebSite","@id":"https://shipitwithai.heartofcolumbus.shop/#site","name":"Ship It With AI","url":"https://shipitwithai.heartofcolumbus.shop/","publisher":{"@id":"https://shipitwithai.heartofcolumbus.shop/#business"},"inLanguage":"en-US"}]}</script>
 </head>
 <body>
@@ -79,7 +80,7 @@
     <div class="home-editorial approach-heading">
       <h2 id="approach-title">Fix the part that’s slowing you down.</h2>
       <div><p>Like a mechanic tracing a fuel-line leak, I find the problem and build a fix that holds.</p>
-        <button class="explain-link" type="button" data-explain="vacuum" aria-haspopup="dialog" aria-controls="jake-help" hidden>Try the vacuum-shop example</button>
+        <a class="explain-link" href="#formats">Try a workflow</a>
       </div>
     </div>
     <ol class="approach-steps">
@@ -87,6 +88,35 @@
       <li><h3>Find the bottleneck</h3></li>
       <li><h3>Build the fix</h3></li>
     </ol>
+  </div>
+</section>
+
+<section id="formats" class="workflow-sample alt" aria-labelledby="workflow-title">
+  <div class="wrap">
+    <div class="home-editorial">
+      <h2 id="workflow-title">Try a small fix.</h2>
+      <p>Pick an everyday job and see what a tool built around it can do.</p>
+    </div>
+    <div class="workflow-console" hidden>
+      <div class="workflow-options" role="group" aria-label="Choose an example">
+        <button type="button" data-workflow="repair" aria-pressed="true">Repair tracker</button>
+        <button type="button" data-workflow="booking" aria-pressed="false">Booking</button>
+        <button type="button" data-workflow="payout" aria-pressed="false">Payout check</button>
+      </div>
+      <div class="workflow-record">
+        <div class="workflow-record-heading">
+          <h3 id="workflow-record-title"></h3>
+          <p>Sample data</p>
+        </div>
+        <p id="workflow-record-detail"></p>
+        <div class="workflow-result" role="status" aria-atomic="true">
+          <strong id="workflow-state"></strong>
+          <p id="workflow-result"></p>
+        </div>
+        <button class="btn" id="workflow-action" type="button"></button>
+      </div>
+    </div>
+    <div class="story-links"><a href="/demos/">Explore more demos</a><a href="/tutorials/">Follow a tutorial</a></div>
   </div>
 </section>
 
@@ -219,15 +249,6 @@
     <div><h2>I was doing this before AI.</h2></div>
     <div>
       <p>I spent 10 years automating budgets, reports and reconciliations in Excel and other tools. AI gives me more ways to do the same work today. I love helping small teams save time with what they already have and what they can afford.</p>
-    </div>
-  </div>
-</section>
-
-<section id="formats" class="home-learning">
-  <div class="wrap home-editorial">
-    <div><h2>Want to try it yourself?</h2></div>
-    <div>
-      <div class="story-links"><a href="/tutorials/">Follow a tutorial</a><a href="/tutorials/local-search-basics/">Get found in local search</a><a href="/demos/">Try a demo</a><a href="/workshops/">See workshops and talks</a></div>
     </div>
   </div>
 </section>
