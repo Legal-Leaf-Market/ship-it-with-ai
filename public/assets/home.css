@@ -1,0 +1,57 @@
+.home-intro h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.6rem, 8.5vw, 8rem);
+  font-weight: normal;
+  letter-spacing: -.075em;
+  line-height: .97;
+  text-transform: none;
+}
+.home-intro .hero-art img { aspect-ratio: 1.28; }
+.home-intro .lede { font-size: clamp(1rem, 1.6vw, 1.24rem); }
+.home-editorial, .home-project-lead {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(24px, 6vw, 82px);
+  align-items: start;
+}
+.home-editorial h2, .home-portfolio h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: normal;
+  font-size: clamp(2.35rem, 5.2vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -.047em;
+  text-wrap: initial;
+}
+.home-editorial p, .home-projects .detail { color: var(--ink-soft); max-width: 64ch; }
+.home-editorial p.eyebrow { color: var(--rust); }
+.home-editorial p + p, .home-editorial h2 + p, .home-projects .detail { margin-top: 15px; }
+.story-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 18px; }
+.story-links a, .service-list a { color: var(--rust); text-underline-offset: .22em; font-weight: 600; }
+.service-list { margin: 0; }
+.service-list div { padding: 17px 0; border-top: 1px solid #78645178; scroll-margin-top: 18px; }
+.service-list div:last-child { border-bottom: 1px solid #78645178; }
+.service-list dt { font: 700 1.85rem/1.1 var(--heading); }
+.service-list dd { margin: 6px 0 0; color: var(--ink-soft); }
+.home-projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 27px;
+}
+.home-project-lead {
+  grid-column: 1/-1;
+  padding: 24px 0 30px;
+  border-block: 1px solid #78645178;
+}
+.home-project-lead h3 { font-size: clamp(2.5rem, 5vw, 4.25rem); }
+.home-project h3 { font-size: 2rem; }
+.home-projects .pick { display: inline-block; color: var(--rust); margin-top: 14px; font-weight: 600; text-underline-offset: .22em; }
+.home-learning { padding-block: clamp(46px, 7vw, 88px); }
+@media (max-width: 820px) {
+  .home-editorial, .home-project-lead { grid-template-columns: 1fr; }
+  .home-intro .hero-art img { aspect-ratio: 1.85; }
+}
+@media (max-width: 680px) {
+  .home-projects { grid-template-columns: 1fr; }
+  .home-project + .home-project { padding-top: 18px; border-top: 1px solid #78645178; }
+}

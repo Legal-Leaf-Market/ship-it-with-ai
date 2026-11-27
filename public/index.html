@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/learn.css">
+<link rel="stylesheet" href="/assets/home.css">
 <script src="/assets/menu.js" defer></script>
 </head>
 <body>
@@ -32,15 +33,15 @@
 </header>
 
 <main id="main">
-<section class="hero dark">
+<section class="hero home-intro dark">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Jake Kennedy · Hoosier born · Columbus, Indiana</p>
-      <h1><span>Bring me the pieces.</span> <span>I’ll build what you need.</span></h1>
-      <p class="lede">I build websites and custom software, and I handle marketing plans and execution for small businesses. Bring the tools you already use and the work that’s taking too long. I’ll help you bring in customers and cut busywork and tech costs.</p>
+      <p class="eyebrow">Hoosier born · Columbus, Indiana</p>
+      <h1>Hi, I’m Jake.</h1>
+      <p class="lede">I work with small-business owners who could use a hand with their website, their marketing, or the work that piles up behind the counter. Tell me what’s taking too long. We’ll see what we can fix with the tools you already have.</p>
       <div class="actions">
-        <a class="btn" href="?session=consulting#book" data-pick="Consulting">Tell me what you need</a>
-        <a class="btn ghost" href="#portfolio">See what I’ve built</a>
+        <a class="btn" href="?session=consulting#book" data-pick="Consulting">Tell me what’s giving you trouble</a>
+        <a class="btn ghost" href="#portfolio">Take a look at my work</a>
       </div>
     </div>
     <figure class="hero-art">
@@ -49,65 +50,41 @@
   </div>
 </section>
 
-<nav class="quick-links" aria-label="Explore services">
-  <ul class="wrap">
-    <li><a href="#erp">Small business ERP</a></li>
-    <li><a href="#websites">Websites &amp; stores</a></li>
-    <li><a href="#marketing">Marketing plans &amp; execution</a></li>
-    <li><a href="#automation">Automation</a></li>
-  </ul>
-</nav>
-
-<section id="services" class="alt">
-  <div class="wrap">
-    <h2>What I can build for you</h2>
-    <div class="formats">
-      <article class="format feature" id="erp">
-        <h3>Small business ERPs</h3>
-        <p class="detail">Enterprise resource planning (ERP) software connects the work you do for customers with the work you do behind the scenes.</p>
-        <p class="detail">Track inquiries, bookings, agreements, invoices, and payments in one place. Start with the part that costs you the most time, then connect reporting and bookkeeping as you grow.</p>
-        <a class="work-link" href="#work">See how Crossroads uses it</a>
-      </article>
-      <article class="format" id="websites">
-        <h3>Websites and online stores</h3>
-        <p class="detail">Give customers a clear path to inquire, book, or buy. I build service websites, storefronts, and directories, and can connect the booking or checkout tools you already use.</p>
-      </article>
-      <article class="format" id="marketing">
-        <h3>Marketing plans and execution</h3>
-        <p class="detail">Get clear on what you sell, then make that message work across your website, Instagram, Facebook, and print. I can build campaign pages, create social posts and sales materials, and connect them to a way for people to inquire or buy.</p>
-      </article>
-      <article class="format" id="automation">
-        <h3>Custom tools and automation</h3>
-        <p class="detail">Turn a recurring spreadsheet, a manual reminder, or a messy handoff into a tool your team can use. I build dashboards and integrations, and can help connect payment records, transaction imports, and accounting reports.</p>
-      </article>
+<section id="work">
+  <div class="wrap home-editorial">
+    <div><p class="eyebrow">Something I built for my own business</p><h2>How we run Crossroads Wedding Co.</h2></div>
+    <div>
+      <p>When a couple books with us, I want their inquiry, agreement, signature, and deposit status tied to the same event. That way I can answer “Are we all set for Saturday?” without piecing together a string of emails.</p>
+      <p>We use the booking software I built in-house. I’m now extending it into bookkeeping so we can track transactions and see how the business is doing.</p>
+      <div class="story-links"><a href="https://crossroadsweddingco.shop">Visit Crossroads Wedding Co.</a><a href="/demos/#booking-demo">Try a sample booking</a></div>
     </div>
   </div>
 </section>
 
-<section class="dark" id="work">
-  <div class="wrap">
-    <p class="eyebrow">Built for my own business</p>
-    <h2>How we run Crossroads Wedding Co.</h2>
-    <p class="lede">The shoemaker’s kids do have shoes. Crossroads is my wedding and events business, and we use software we built in-house to manage bookings. I know which screens matter because I use the system myself.</p>
-    <ol class="workflow">
-      <li><h3>Inquiries and bookings</h3><p>Capture what the couple needs and keep their details with the booking.</p></li>
-      <li><h3>Agreements and deposits</h3><p>Keep the service agreement, signatures, and deposit status tied to the event.</p></li>
-      <li><h3>Transactions and books</h3><p>I’m extending that setup into in-house bookkeeping so we can track transactions and see how the business is doing.</p></li>
-    </ol>
-    <p class="lede">AI makes this kind of custom build practical for a small team. For your business, I’d start with a workflow you already know well and build around the way you actually work.</p>
-    <a class="work-link" href="https://crossroadsweddingco.shop">Visit Crossroads Wedding Co.</a>
+<section id="services" class="alt">
+  <div class="wrap home-editorial">
+    <div>
+      <h2>What can I take off your plate?</h2>
+      <p>I can help with one nagging job or build something your whole team will use. We’ll start with what you have and what needs to work better.</p>
+    </div>
+    <dl class="service-list">
+      <div id="websites"><dt>Websites and online stores</dt><dd>Give customers one clear place to find you, ask for a quote, book, or buy. I can connect the checkout or scheduling tools you already use.</dd></div>
+      <div id="marketing"><dt>Marketing plans and execution</dt><dd>Pick an offer customers will understand, then carry it through to the campaign page, Instagram, Facebook, or print. Give people a clear next step and see what brings in inquiries.</dd></div>
+      <div id="erp"><dt>Small-business software (ERP)</dt><dd>Keep inquiries, bookings, agreements, and payments together so your team can see where each job stands. <a href="#work">See how we use it at Crossroads.</a></dd></div>
+      <div id="automation"><dt>Custom tools and automation</dt><dd>Cut down on copying numbers, sending the same reminder, or hunting for the latest spreadsheet. I can build a dashboard or connect payments, transactions, and reports.</dd></div>
+    </dl>
   </div>
 </section>
 
-<section id="portfolio" class="alt">
+<section id="portfolio" class="home-portfolio">
   <div class="wrap">
     <h2>What I’ve built</h2>
-    <div class="formats portfolio-grid">
-      <article class="format portfolio-lead">
+    <div class="home-projects">
+      <article class="home-project-lead">
         <div>
           <h3>Heart of Columbus</h3>
           <p class="detail">I built a searchable guide to Columbus’s independent businesses, with listings that send people directly to a shop’s ordering, booking, or storefront. I also built storefront demos for local owners.</p>
-          <p class="detail">The work goes beyond the site. I researched businesses’ Instagram and Facebook profiles, made illustrated listing artwork, and laid out the 16-page December print edition. It’s one project that brings together local research, editorial design, social discovery, and the tools owners use to take orders.</p>
+          <p class="detail">I also researched their Instagram and Facebook profiles, made the illustrated listings, and laid out the 16-page December print edition. If you know Cisco’s or Jill’s, you might recognize the artwork here.</p>
           <div class="portfolio-links">
             <a class="pick" href="https://heartofcolumbus.shop/">Explore the directory</a>
             <a class="pick" href="https://heartofcolumbus.shop/print/2026-12/">See the print edition</a>
@@ -121,7 +98,7 @@
           <figcaption>Business listing artwork from Heart of Columbus</figcaption>
         </figure>
       </article>
-      <article class="format">
+      <article class="home-project">
         <h3>Legal Leaf Market</h3>
         <p class="detail">I built a searchable product catalog that brings listings from multiple storefronts together. I also built the launch site for Legal Leaf Cafe &amp; Market, a neighborhood cafe and market concept.</p>
         <div class="portfolio-links">
@@ -129,11 +106,11 @@
           <a class="pick" href="https://legalleafmarket.shop/">See the cafe concept</a>
         </div>
       </article>
-      <article class="format">
+      <article class="home-project">
         <h3>Social and sales campaigns</h3>
         <p class="detail">For Crossroads, I built a set of Instagram posts that explain the day rate and lead into an intro call, plus wedding and corporate brochures that are ready to share or print. I can help you give your Instagram and Facebook pages the same clear path from a post to an inquiry.</p>
       </article>
-      <article class="format">
+      <article class="home-project">
         <h3>Kawaii Katz</h3>
         <p class="detail">An online storefront with a product catalog, shopping cart, and original visual identity.</p>
         <a class="pick" href="https://kawaiikatz.heartofcolumbus.shop">See the storefront</a>
@@ -142,27 +119,22 @@
   </div>
 </section>
 
-<section id="about">
-  <div class="wrap about">
-    <div class="body">
-      <h2>Jake Kennedy</h2>
-      <p>I’m a blue-collar Hoosier, born in Indiana and based in Columbus. Think of me as the plumber of the AI world. I figure out where the work is getting stuck, put the pieces together, and make it easier to run.</p>
-      <p>Bring me the spreadsheet, the website, or the tools you already pay for. I’ll look for what we can use and show you a working preview before you commit to putting it into use.</p>
-    </div>
-    <div class="body">
-      <h3>Accounting and fintech experience</h3>
-      <p>I have more than a decade of accounting and technology experience. I’ve worked on bookkeeping, reconciliations, and month-end close. In fintech, I’ve helped teams connect transaction feeds to general ledgers in Sage Intacct and NetSuite. I bring that experience to the software I build for business owners.</p>
+<section id="about" class="alt">
+  <div class="wrap home-editorial">
+    <div><h2>A little about me</h2></div>
+    <div>
+      <p>I’m a blue-collar Hoosier, born in Indiana and based in Columbus. I’ve spent more than a decade in accounting and technology, working on everything from bank reconciliations to connecting transaction feeds to Sage Intacct and NetSuite.</p>
+      <p>I think of myself as the plumber of the AI world. I come in, see where the work’s getting stuck, and put the pieces together. I’ll show you a working preview so you can try it on a real task before you put it to work.</p>
     </div>
   </div>
 </section>
 
-<section class="alt" id="formats">
-  <div class="wrap">
-    <h2>Learn how to build it</h2>
-    <div class="formats learning-grid">
-      <article class="format"><h3>Tutorials</h3><p class="detail">Follow a project from first idea to a result you can test.</p><a class="pick" href="/tutorials/">Browse tutorials</a></article>
-      <article class="format"><h3>Interactive demos</h3><p class="detail">Try a booking workflow or build a marketing plan with sample data.</p><a class="pick" href="/demos/">Try the demos</a></article>
-      <article class="format"><h3>Workshops and talks</h3><p class="detail">Build a site with Jake or bring a live demonstration to your group.</p><a class="pick" href="/workshops/">See workshops and talks</a></article>
+<section id="formats" class="home-learning">
+  <div class="wrap home-editorial">
+    <div><h2>Want to try it yourself?</h2></div>
+    <div>
+      <p>I teach this, too. Start with a tutorial, try an example in your browser, or get your group together for a workshop.</p>
+      <div class="story-links"><a href="/tutorials/">Follow a tutorial</a><a href="/demos/">Try a demo</a><a href="/workshops/">See workshops and talks</a></div>
     </div>
   </div>
 </section>
@@ -170,9 +142,9 @@
 <section class="book dark" id="book">
   <div class="wrap">
     <div>
-      <h2>What would make your work easier?</h2>
-      <p class="lede">Tell me about your business, what you’re using today, and what you’d like to improve. If you’re planning a workshop or talk, tell me about your group and dates.</p>
-      <p class="lede" style="margin-top:14px">I’ll follow up about scope, timing, and pricing. Based in Columbus, Indiana. Available in person or online.</p>
+      <h2>Drop me a note.</h2>
+      <p class="lede">A line or two is plenty. Tell me what you do and what you wish worked better. If you’re putting together a workshop or talk, tell me who’s coming and when.</p>
+      <p class="lede" style="margin-top:14px">I’ll get back to you about what I can do, how long it might take, and what it would cost. We can meet in Columbus or talk online.</p>
     </div>
     <form class="booking" name="booking" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company-url">
       <input type="hidden" name="subject" value="New Ship It With AI booking request">
