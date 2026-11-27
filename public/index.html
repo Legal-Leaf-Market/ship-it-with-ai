@@ -66,6 +66,14 @@ section { padding-block: clamp(68px, 10vw, 138px); }
 .lede { max-width: 64ch; margin-top: 21px; color: var(--ink-soft); }
 .dark .lede { color: var(--mist); }
 
+.quick-links { color: var(--paper); background: #221d18; border-bottom: 1px solid #503b2f; }
+.quick-links ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; margin-block: 0; list-style: none; }
+.quick-links li + li { border-left: 1px solid #5c4838; }
+.quick-links a { display: flex; align-items: center; min-height: 57px; padding: 9px 16px; text-decoration: none; font: 700 1.2rem/1.1 var(--heading); }
+.quick-links a::after { content: ""; width: 7px; height: 7px; border-top: 1px solid var(--orange); border-right: 1px solid var(--orange); transform: rotate(45deg); margin-left: auto; }
+.quick-links a:hover { color: var(--orange); background: #33291f; }
+.quick-links a:focus-visible { outline-offset: -4px; }
+
 header.top { position: relative; z-index: 2; color: var(--paper); background: #101010; border-bottom: 1px solid #ffffff35; }
 header.top .wrap { min-height: 74px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .mark { display: inline-flex; align-items: center; gap: 11px; font: 700 1.15rem/1 var(--heading); text-transform: uppercase; letter-spacing: .09em; white-space: nowrap; text-decoration: none; }
@@ -137,6 +145,13 @@ header.top nav a.cta:hover { background: #ffa376; }
 .work-link { color: var(--orange); }
 .portfolio-links { display: flex; flex-wrap: wrap; gap: 0 24px; }
 .portfolio-lead { grid-column: 1/-1; border-top-color: var(--rust); background: linear-gradient(120deg, #fff8ee, #f0d7b7); }
+.portfolio-lead { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 70px); align-items: center; }
+.project-art { margin: 0; min-width: 0; }
+.project-art-board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; padding: 18px; background: repeating-linear-gradient(100deg, #ffffff07 0 1px, transparent 1px 5px), radial-gradient(ellipse at 65% 94%, #5e3425, #252018 75%); border: 1px solid #181410; box-shadow: 5px 5px 0 #81604b; }
+.project-art img { display: block; width: 100%; height: auto; filter: drop-shadow(3px 7px 6px #000b); }
+.project-art img:first-child { transform: rotate(-7deg); }
+.project-art img + img { transform: rotate(7deg); }
+.project-art figcaption { margin-top: 15px; color: var(--ink-soft); font: 500 .72rem/1.5 var(--mono); }
 .portfolio-lead h3 { font-size: clamp(2.6rem, 5vw, 4.9rem); }
 .portfolio-lead .detail { max-width: 77ch; }
 
@@ -170,7 +185,8 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 @media (max-width: 900px) {
   header.top nav a:not(.cta) { display: none; }
   .hero h1 { font-size: clamp(3.7rem, 8vw, 6rem); }
-  .hero .wrap, .about, .book .wrap { grid-template-columns: 1fr; }
+  .hero .wrap, .about, .book .wrap, .portfolio-lead { grid-template-columns: 1fr; }
+  .project-art { max-width: 550px; }
   .hero-art { width: min(100% - 12px, 660px); margin-top: 12px; transform: none; }
   .hero-art img { aspect-ratio: 1.85; object-position: center 57%; }
 }
@@ -181,6 +197,10 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   .hero h1 { font-size: clamp(3rem, 12.6vw, 4.75rem); }
   .hero .lede { line-height: 1.55; }
   .formats, .workflow, .row { grid-template-columns: 1fr; }
+  .quick-links ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .quick-links li:nth-child(3) { border-left: 0; }
+  .quick-links li:nth-child(n+3) { border-top: 1px solid #5c4838; }
+  .quick-links a { min-height: 48px; padding-inline: 7px 12px; font-size: 1.05rem; }
   .row { gap: 0; }
   .format { box-shadow: 4px 4px 0 #342a2070; }
 }
@@ -223,24 +243,34 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   </div>
 </section>
 
+<nav class="quick-links" aria-label="Explore services">
+  <ul class="wrap">
+    <li><a href="#erp">Small business ERP</a></li>
+    <li><a href="#websites">Websites &amp; stores</a></li>
+    <li><a href="#marketing">Marketing</a></li>
+    <li><a href="#automation">Automation</a></li>
+  </ul>
+</nav>
+
 <section id="services" class="alt">
   <div class="wrap">
     <h2>What I can build for you</h2>
     <div class="formats">
-      <article class="format feature">
+      <article class="format feature" id="erp">
         <h3>Small business ERPs</h3>
         <p class="detail">Enterprise resource planning (ERP) software connects the work you do for customers with the work you do behind the scenes.</p>
         <p class="detail">Track inquiries, bookings, agreements, invoices, and payments in one place. Start with the part that costs you the most time, then connect reporting and bookkeeping as you grow.</p>
+        <a class="work-link" href="#work">See how Crossroads uses it</a>
       </article>
-      <article class="format">
+      <article class="format" id="websites">
         <h3>Websites and online stores</h3>
         <p class="detail">Give customers a clear path to inquire, book, or buy. I build service websites, storefronts, and directories, and can connect the booking or checkout tools you already use.</p>
       </article>
-      <article class="format">
+      <article class="format" id="marketing">
         <h3>Marketing, Instagram, and Facebook</h3>
         <p class="detail">Get clear on what you sell, then make that message work across your website, Instagram, Facebook, and print. I can build campaign pages, create social posts and sales materials, and connect them to a way for people to inquire or buy.</p>
       </article>
-      <article class="format">
+      <article class="format" id="automation">
         <h3>Custom tools and automation</h3>
         <p class="detail">Turn a recurring spreadsheet, a manual reminder, or a messy handoff into a tool your team can use. I build dashboards and integrations, and can help connect payment records, transaction imports, and accounting reports.</p>
       </article>
@@ -268,10 +298,22 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     <h2>What I’ve built</h2>
     <div class="formats portfolio-grid">
       <article class="format portfolio-lead">
-        <h3>Heart of Columbus</h3>
-        <p class="detail">I built a searchable guide to Columbus’s independent businesses, with listings that send people directly to a shop’s ordering, booking, or storefront. I also built storefront demos for local owners.</p>
-        <p class="detail">The work goes beyond the site. I researched businesses’ Instagram and Facebook profiles, made illustrated listing artwork, and laid out the 16-page December print edition. It’s one project that brings together local research, editorial design, social discovery, and the tools owners use to take orders.</p>
-        <a class="pick" href="https://heartofcolumbus.shop/">Explore Heart of Columbus</a>
+        <div>
+          <h3>Heart of Columbus</h3>
+          <p class="detail">I built a searchable guide to Columbus’s independent businesses, with listings that send people directly to a shop’s ordering, booking, or storefront. I also built storefront demos for local owners.</p>
+          <p class="detail">The work goes beyond the site. I researched businesses’ Instagram and Facebook profiles, made illustrated listing artwork, and laid out the 16-page December print edition. It’s one project that brings together local research, editorial design, social discovery, and the tools owners use to take orders.</p>
+          <div class="portfolio-links">
+            <a class="pick" href="https://heartofcolumbus.shop/">Explore the directory</a>
+            <a class="pick" href="https://heartofcolumbus.shop/print/2026-12/">See the print edition</a>
+          </div>
+        </div>
+        <figure class="project-art">
+          <div class="project-art-board">
+            <img src="/images/ciscos-barber-shop.webp" alt="Illustrated sticker for Cisco’s Barber Shop" width="380" height="380" loading="lazy">
+            <img src="/images/jills-diner.webp" alt="Illustrated sticker for Jill’s Diner" width="380" height="380" loading="lazy">
+          </div>
+          <figcaption>Business listing artwork from Heart of Columbus</figcaption>
+        </figure>
       </article>
       <article class="format">
         <h3>Legal Leaf Market</h3>
