@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One-page website builder | Ship It With AI</title>
+<meta name="description" content="Edit, preview, and download a starter website for a fictional local business.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/learn.css">
+<script src="/assets/menu.js" defer></script>
+<script src="/assets/website-builder.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/"><i aria-hidden="true"></i>Ship It With AI</a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="/#services">Services</a><a href="/#portfolio">My work</a><a href="/tutorials/">Tutorials</a><a href="/demos/" aria-current="page">Demos</a><a href="/workshops/">Workshops</a><a class="cta" href="/?session=consulting#book">Start a project</a></nav>
+    <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" hidden>Menu</button>
+  </div>
+  <dialog id="site-menu" aria-labelledby="menu-title">
+    <div class="drawer-top"><h2 id="menu-title">Menu</h2><form method="dialog"><button type="submit" autofocus>Close</button></form></div>
+    <nav class="drawer-nav" aria-label="Mobile navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/#portfolio">My work</a><a href="/tutorials/">Tutorials</a><a href="/demos/" aria-current="page">Demos</a><a href="/workshops/">Workshops</a><a class="cta" href="/?session=consulting#book">Start a project</a></nav>
+  </dialog>
+</header>
+<main id="main">
+<section class="dark page-intro">
+  <div class="wrap">
+    <a class="back-link" href="/demos/">All demos</a>
+    <h1>Build a one-page website</h1>
+    <p class="lede">Start with a fictional furniture repair shop. Change the text to fit your idea, preview it on a phone or desktop, and download an HTML file you can open in any browser.</p>
+  </div>
+</section>
+<section class="wrap builder-layout" aria-label="Website builder">
+  <div class="demo-panel builder-editor">
+    <h2>Page details</h2>
+    <p class="detail">Edits stay in this browser tab. Use sample details while you’re practicing.</p>
+    <form id="builder-form" hidden>
+      <div class="field"><label for="builder-name">Business name</label><input id="builder-name" name="business" required maxlength="65" value="Mill Street Furniture Repair"></div>
+      <div class="field"><label for="builder-headline">Headline</label><input id="builder-headline" name="headline" required maxlength="95" value="Get your favorite chair back in use"></div>
+      <div class="field"><label for="builder-services">What you do</label><textarea id="builder-services" name="services" required maxlength="260">Loose joints, broken seats, and wood touch-ups. Ask about pickup in the Columbus area.</textarea></div>
+      <div class="field"><label for="builder-action">Button label</label><input id="builder-action" name="action" required maxlength="45" value="Ask for an estimate"></div>
+      <div class="field"><label for="builder-email">Contact email</label><input id="builder-email" name="email" type="email" required maxlength="100" value="repairs@example.com"></div>
+      <button type="submit" class="btn">Download HTML</button>
+      <button type="reset" class="quiet-button">Reset example</button>
+      <p id="builder-status" class="demo-event" role="status"></p>
+    </form>
+    <noscript><p>Enable JavaScript to edit and download the example, or follow the <a href="/tutorials/first-website/">first website tutorial</a> to build it by hand.</p></noscript>
+  </div>
+  <div class="builder-preview">
+    <div class="builder-preview-heading">
+      <h2>Preview</h2>
+      <div class="builder-modes" role="group" aria-label="Preview widths" hidden>
+        <button type="button" aria-pressed="true" data-preview="wide">Desktop</button>
+        <button type="button" aria-pressed="false" data-preview="narrow">Phone width</button>
+      </div>
+    </div>
+    <div class="builder-canvas">
+      <article class="builder-sheet">
+        <p id="preview-name">Mill Street Furniture Repair</p>
+        <h3 id="preview-headline">Get your favorite chair back in use</h3>
+        <p id="preview-services">Loose joints, broken seats, and wood touch-ups. Ask about pickup in the Columbus area.</p>
+        <p class="builder-sample-action" id="preview-action">Ask for an estimate</p>
+      </article>
+    </div>
+    <p class="builder-caption">The preview button is for display. In the downloaded page it opens an email draft.</p>
+    <a href="/tutorials/first-website/">Follow the tutorial to test and publish your file</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Ship It With AI · Jake Kennedy · Columbus, Indiana</span>
+    <a href="/?session=consulting#book">Start a project</a>
+  </div>
+</footer>
+</body>
+</html>
