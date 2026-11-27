@@ -99,7 +99,8 @@
 }
 .jake-dialog::backdrop { background: #120d09c4; }
 .jake-dialog-blue { border-top-color: #2369b1; }
-.jake-dialog form { display: flex; justify-content: flex-end; }
+.jake-dialog-controls { display: flex; align-items: center; gap: 12px; }
+.jake-dialog-controls form { margin-left: auto; }
 .jake-dialog h2 { font-size: clamp(2.2rem, 7vw, 3rem); margin: 5px 0 13px; }
 .jake-dialog h2:focus { outline: none; }
 .jake-dialog p + a { display: inline-block; margin-top: 12px; font-weight: 600; }
@@ -189,6 +190,7 @@
   gap: 14px;
 }
 .case-brochure {
+  position: relative;
   display: grid;
   grid-template-columns: clamp(72px, 14vw, 114px) minmax(0, 1fr);
   align-items: center;
@@ -197,8 +199,10 @@
   color: var(--ink);
   background: #f9ead4;
 }
-.case-brochure-cover { display: block; box-shadow: 3px 4px 0 #a95b39; }
-.case-brochure-cover img { display: block; width: 100%; height: auto; }
+.case-brochure-cover { display: block; width: 100%; height: auto; box-shadow: 3px 4px 0 #a95b39; }
+.case-brochure-pdf::after { content: ""; position: absolute; inset: 0; }
+.case-brochure-pdf:focus-visible::after { outline: 3px solid var(--orange); outline-offset: 3px; }
+.case-brochure-site { position: relative; }
 .case-brochure h4 { margin: 0 0 8px; font: 700 clamp(1.2rem, 3vw, 1.85rem)/1.05 var(--heading); }
 .case-brochure div a {
   display: block;
