@@ -337,6 +337,7 @@
   if (s && names[s]) pick(names[s]);
   document.querySelectorAll('[data-pick]').forEach(function (a) {
     a.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       e.preventDefault();
       pick(a.getAttribute('data-pick'));
       document.getElementById('book').scrollIntoView();
